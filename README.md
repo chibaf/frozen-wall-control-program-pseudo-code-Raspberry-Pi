@@ -16,7 +16,7 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
     writeLog(TLog,ADC,Current)   // write log file
     // id=id11 // SSR_11
     if t11 > T11:
-       t11on=func11(TLog,ADC)  // calc on/off time t1,t2
+      t11on=func11(TLog,ADC)  // calc on/off time t1,t2
       t11=0
     else
       if t11<=t11on
@@ -26,7 +26,7 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
       increse t11
     // id=id12 // SSR_12
     if t12 > T12:
-       t12on=func12(TLog,ADC)  // calc on/off time t1,t2
+      t12on=func12(TLog,ADC)  // calc on/off time t1,t2
       t12=0
     else
       if t12<=t12on
