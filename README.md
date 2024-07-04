@@ -22,9 +22,9 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
       t11=0
     else
       if t11<=t11on
-        GPIO(11,on)
+        GPIO(11,on)   // make GPIO 11 on
       elseif t11on<t11<=T11
-        GPIO(11,off)
+        GPIO(11,off)  // make GPIO 11 off
       increse t11
     // id=id12 // SSR_12
     if t12 > T12:
