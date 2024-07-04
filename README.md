@@ -1,4 +1,4 @@
-# rozen-wall-control-program-pseudo-code-Raspberry-Pi
+# frozen-wall-control-program-pseudo-code-Raspberry-Pi
 
 frozen-wall-control-program-pseudo-code-Raspberry-Pi
 
