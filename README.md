@@ -51,3 +51,7 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
       increase T16
 
 </pre>
+
+![GPIO 27](https://github.com/chibaf/rozen-wall-control-program-pseudo-code-Raspberry-Pi/assets/1296728/80a3d6c9-122e-4ed4-9d26-1e6abda28791)
+
+￼11,12,13=heater   16=propeler    15=pump
