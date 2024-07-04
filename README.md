@@ -36,6 +36,9 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
       elseif t12on<t12<=T12
         GPIO(12,off)
       increse t12
+</pre>
+
+<pre>
     # id=id13 : SSR_13
     if t13 &ge; T13:
       t13on=func13(TLog,ADC)  # calc on/off time t1,t2
