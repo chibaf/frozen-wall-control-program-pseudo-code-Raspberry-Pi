@@ -4,51 +4,66 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
 
 <pre>
   time t11,t12,t13,t15,t16;  // interval times given
-  // t11=t11_on+t11_off
-  // t13=t12_on+t12_off
-  // t15=t13_on+t13_off
-  // t11=t15_on+t15_off
-  // t11=t16_on+t16_off
+  // T11=t11_on+t11_off
+  // T12=t12_on+t12_off
+  // T13=t13_on+t13_off
+  // T15=t15_on+t15_off
+  // T16=t16_on+t16_off
   while true:
     TLog=read_logger()  // read logger
     ADC=read_adc()  // read adc
     Current=read_current()   // read yageta current
     writeLog(TLog,ADC,Current)   // write log file
     // id=id11 // SSR_11
-    if T11 > t11:
-      (t1,t2)=func11(TLog,ADC)  // calc on/off time t1,t2
-      T11=0
-      ssr11(t1,t2)  // ssr on/off
+    if t11 > T11:
+       t11on=func11(TLog,ADC)  // calc on/off time t1,t2
+      t11=0
     else
-      increse T11
+      if t11<=t11on
+        GPIO(11,on)
+      elseif t11on<t11<=T11
+        GPIO(11,off)
+      increse t11
     // id=id12 // SSR_12
-    if T12 > t12:
-      (t1,t2)=func12(TLog,ADC)  // calc on/off time t1,t2
-      T12=0
-      ssr12(t1,t2)  // ssr on/off
+    if t12 > T12:
+       t12on=func12(TLog,ADC)  // calc on/off time t1,t2
+      t12=0
     else
-      increase T12
+      if t12<=t12on
+        GPIO(12,on)
+      elseif t12on<t12<=T12
+        GPIO(12,off)
+      increse t12
     // id=id13 // SSR_13
-    if T13 > t13:
-      (t1,t2)=func13(TLog,ADC)  // calc on/off time t1,t2
-      T13=0
-      ssr13(t1,t2)  // ssr on/off
+    if t13 > T13:
+      t13on=func13(TLog,ADC)  // calc on/off time t1,t2
+      t13=0
     else
-      increase T13
+      if t13<=t13on
+        GPIO(13,on)
+      elseif t13on<t13<=T13
+        GPIO(13,off)
+      increse t13
     // id=id15 // SSR_15
-    if T15 > t15:
-      (t1,t2)=func15(TLog,ADC)  // calc on/off time t1,t2
-      T15=0
-      ssr15(t1,t2)  // ssr on/off
+    if t15 > T15:
+      t15on=func15(TLog,ADC)  // calc time of on
+      t15=0
     else
-      increase T15
+      if t15<=t15on
+        GPIO(11,on)
+      elseif t15on<t15<=T15
+        GPIO(15,off)
+      increse t11
     // id=id16 // SSR_16
-    if T16 > t16:
-      (t1,t2)=func16(TLog,ADC)  // calc on/off time t1,t2
-      T16=0
-      ssr16(t1,t2)  // ssr on/off
+    if t16 > T16:
+      t16on=func16(TLog,ADC)  // calc on/off time t1,t2
+      t16=0
     else
-      increase T16
+      if t16<=t16on
+        GPIO(16,on)
+      elseif t16on<t16=T16
+        GPIO(16,off)
+      increse t16
 
 </pre>
 
