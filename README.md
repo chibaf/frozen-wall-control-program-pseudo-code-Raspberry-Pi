@@ -2,6 +2,8 @@
 
 frozen-wall-control-program-pseudo-code-Raspberry-Pi
 
+## pseudo code of control
+
 <pre>
   time t11,t12,t13,t15,t16;  // interval times given
   // T11=t11_on+t11_off
