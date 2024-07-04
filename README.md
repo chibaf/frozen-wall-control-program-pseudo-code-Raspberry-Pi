@@ -17,17 +17,17 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
     Current=read_current()   // read yageta current
     writeLog(TLog,ADC,Current)   // write log file
     // id=id11 // SSR_11
-    if t11 > T11:
+    if t11 &ge; T11:
       t11on=func11(TLog,ADC)  // calc on/off time t1,t2
       t11=0
     else
-      if t11<=t11on
+      if t11 &le; t11on
         GPIO(11,on)   // make GPIO 11 on
       elseif t11on &lt; t11 &le; T11
         GPIO(11,off)  // make GPIO 11 off
       increse t11
     // id=id12 // SSR_12
-    if t12 > T12:
+    if t12 &ge T12:
       t12on=func12(TLog,ADC)  // calc on/off time t1,t2
       t12=0
     else
@@ -37,33 +37,33 @@ frozen-wall-control-program-pseudo-code-Raspberry-Pi
         GPIO(12,off)
       increse t12
     // id=id13 // SSR_13
-    if t13 > T13:
+    if t13 &ge; T13:
       t13on=func13(TLog,ADC)  // calc on/off time t1,t2
       t13=0
     else
-      if t13<=t13on
+      if t13 &le; t13on
         GPIO(13,on)
-      elseif t13on<t13<=T13
+      elseif t13on &lt; t13 &le; T13
         GPIO(13,off)
       increse t13
     // id=id15 // SSR_15
-    if t15 > T15:
+    if t15 &ge; T15:
       t15on=func15(TLog,ADC)  // calc time of on
       t15=0
     else
       if t15<=t15on
         GPIO(11,on)
-      elseif t15on<t15<=T15
+      elseif t15on &lt; t15 &le; T15
         GPIO(15,off)
       increse t11
     // id=id16 // SSR_16
-    if t16 > T16:
+    if t16 &ge; T16:
       t16on=func16(TLog,ADC)  // calc on/off time t1,t2
       t16=0
     else
-      if t16<=t16on
+      if t16 & le; t16on
         GPIO(16,on)
-      elseif t16on<t16=T16
+      elseif t16on &le; t16 &le; T16
         GPIO(16,off)
       increse t16
 
